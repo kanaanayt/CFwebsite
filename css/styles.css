@@ -1,16 +1,14 @@
 :root {
-  --orange-ish: #E8C572;
-  --blue-ish: #459AD8;
-  --white-ish: #FFFFFF;
-  --grey-ish: #EBF0F5;
-  --black-ish: #000000;
+  --orange-ish: #e8c572;
+  --blue-ish: #459ad8;
+  --white-ish: #fff;
+  --grey-ish: #ebf0f5;
+  --black-ish: #000;
   --yellow-ish: #edc655;
   --peach-ish: #fcffad;
   --red-ish: #f76414;
   $myFont: 400;
 }
-
-
 
 body {
   background-color: var(--orange-ish);
@@ -18,6 +16,7 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
+
   color: var(--blue-ish);
 }
 
@@ -40,11 +39,13 @@ a {
   color: var(--white-ish);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;
 }
 
-button, .button {
+button,
+.button {
   border: none;
   display: inline-block;
   font-family: inherit;
@@ -53,11 +54,14 @@ button, .button {
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
-  border-bottom: 2px solid rgba(0,0,0,0.3);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition: 0.5s opacity;
 }
 
-button:hover, button:focus, .button:hover, .button:focus {
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
   cursor: pointer;
   opacity: 0.6;
 }
@@ -71,21 +75,23 @@ button:hover, button:focus, .button:hover, .button:focus {
   text-decoration: none;
 }
 
-
 div {
   /* width: 400px; */
+
   /* height: 400px; */
-  /* padding: 100px 100px; /* Adds a 10px inner spacing to all sides*/
-  /* margin: 0px 100px; /* Adds a 10px outer spacing to all sides*/
-  /* border: 2px solid black; /* Attributes describe: thickness, type, color*/
+
+  /* padding: 100px 100px; /* Adds a 10px inner spacing to all sides */
+
+  /* margin: 0px 100px; /* Adds a 10px outer spacing to all sides */
+
+  /* border: 2px solid black; /* Attributes describe: thickness, type, color */
+
   /* margin: 0 auto; */
 }
 
 /* .header__title {
   margin: 0 auto;
 } */
-
-
 
 .profile__portrait {
   float: left;
@@ -105,14 +111,14 @@ div {
 .page-header__item {
   flex: 0 1 100px;
   width: 200px;
-  margin-left: 0px;
+  margin-left: 0;
 }
 
-.page-header, .page-header__item:last-child {
+.page-header,
+.page-header__item:last-child {
   flex-grow: 1;
   width: 30px;
   text-align: right;
-
 }
 
 .page-header {
@@ -171,19 +177,18 @@ div {
     margin: 0;
   }
 
+  .grid__item {
+    background-color: lightgray;
+    padding: 30px;
+    width: auto;
+    min-height: auto;
+    margin: 0;
+  }
 
-.grid__item {
-  background-color: lightgray;
-  padding: 30px;
-  width: auto;
-  min-height: auto;
-  margin: 0;
-}
-
-.grid__item:last-child {
-  grid-column: 3/3;
-  grid-row: 1/3;
-}
+  .grid__item:last-child {
+    grid-column: 3/3;
+    grid-row: 1/3;
+  }
 }
 
 .title {
@@ -195,28 +200,30 @@ div {
   width: 400px;
   margin: 0 auto;
   text-align: left;
-
 }
-
 
 @media all and (max-width: 550px) {
   .grid {
     grid-template-columns: 1fr;
   }
 }
+
 @media all and (min-width: 550px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto/auto;
     grid-row: auto/auto;
   }
+
   h1 {
     font-size: 22px;
   }
@@ -226,13 +233,16 @@ div {
   0% {
     fill: var(--yellow-ish);
   }
+
   50% {
     fill: var(--peach-ish);
   }
+
   100% {
     fill: var(--red-ish);
   }
 }
+
 .sun {
   animation: 4s color-change infinite alternate linear;
 }
@@ -241,6 +251,7 @@ div {
   from {
     transform: translate(0, 50px);
   }
+
   to {
     transform: translate(200px, 50px);
   }
@@ -254,6 +265,7 @@ div {
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(100px, 48px);
   }
