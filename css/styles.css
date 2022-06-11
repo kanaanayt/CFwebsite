@@ -12,11 +12,10 @@
 
 body {
   background-color: var(--orange-ish);
-  font-family: 'Montserrat', sans-serif;
+  font-family: Montserrat, sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
-
   color: var(--blue-ish);
 }
 
@@ -54,7 +53,7 @@ button,
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid #000;
   transition: 0.5s opacity;
 }
 
@@ -69,6 +68,8 @@ button:focus,
 .button__secondary {
   background-color: var(--black-ish);
   color: var(--white-ish);
+  display: inline;
+  text-align: center;
 }
 
 .navigation-list__item--active {
@@ -114,7 +115,6 @@ div {
   margin-left: 0;
 }
 
-.page-header,
 .page-header__item:last-child {
   flex-grow: 1;
   width: 30px;
@@ -122,7 +122,12 @@ div {
 }
 
 .page-header {
+  flex-grow: 1;
+  text-align: right;
   border-bottom: 1px solid;
+  display: flex;
+  width: 100%;
+  padding: 20px;
 }
 
 .profile {
@@ -135,18 +140,7 @@ div {
   box-sizing: border-box;
 }
 
-.page-header {
-  display: flex;
-  width: 100%;
-  padding: 20px;
-}
-
 .button__main {
-  display: inline;
-  text-align: center;
-}
-
-.button__secondary {
   display: inline;
   text-align: center;
 }
