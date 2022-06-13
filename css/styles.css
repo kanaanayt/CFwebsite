@@ -7,7 +7,7 @@
   --yellow-ish: #edc655;
   --peach-ish: #fcffad;
   --red-ish: #f76414;
-  $myFont: 400;
+  --myFont: 400;
 }
 
 body {
@@ -26,12 +26,12 @@ h1 {
 
 h2 {
   font-size: 24px;
-  font-weight: $myFont;
+  font-weight: var(--myFont);
 }
 
 h3 {
   font-size: 20px;
-  font-weight: $myFont;
+  font-weight: var(--myFont);
 }
 
 a {
@@ -75,24 +75,6 @@ button:focus,
 .navigation-list__item--active {
   text-decoration: none;
 }
-
-div {
-  /* width: 400px; */
-
-  /* height: 400px; */
-
-  /* padding: 100px 100px; /* Adds a 10px inner spacing to all sides */
-
-  /* margin: 0px 100px; /* Adds a 10px outer spacing to all sides */
-
-  /* border: 2px solid black; /* Attributes describe: thickness, type, color */
-
-  /* margin: 0 auto; */
-}
-
-/* .header__title {
-  margin: 0 auto;
-} */
 
 .profile__portrait {
   float: left;
@@ -158,7 +140,7 @@ div {
   margin-left: 15px;
 }
 
-.grid__item: {
+.grid__item {
   display: inline-block;
   width: 33%;
 }
@@ -173,10 +155,10 @@ div {
 
   .grid__item {
     background-color: lightgray;
-    padding: 30px;
+    padding: 20px;
     width: auto;
     min-height: auto;
-    margin: 0;
+    margin: 15px;
   }
 
   .grid__item:last-child {

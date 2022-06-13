@@ -6,18 +6,24 @@
 */
 
 :root {
-  $myFont: 400;
+  --orange-ish: #e8c572;
+  --blue-ish: #459ad8;
+  --white-ish: #fff;
+  --grey-ish: #ebf0f5;
+  --black-ish: #000;
+  --yellow-ish: #edc655;
+  --peach-ish: #fcffad;
+  --red-ish: #f76414;
+  --myFont: 400;
 }
 
-
-
 body {
-  background-color: #E8C572;
-  font-family: 'Montserrat', sans-serif;
+  background-color: var(--orange-ish);
+  font-family: Montserrat, sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
-  color: #459AD8;
+  color: var(--blue-ish);
 }
 
 h1 {
@@ -27,81 +33,57 @@ h1 {
 
 h2 {
   font-size: 24px;
-  font-weight: $myFont;
+  font-weight: var(--myFont);
 }
 
 h3 {
   font-size: 20px;
-  font-weight: $myFont;
+  font-weight: var(--myFont);
 }
 
 a {
-  color: #FFFFFF;
+  color: var(--white-ish);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;
 }
 
-button {
-  border: none;
-  display: inline-block;
-  font-family: inherit;
-  background-color: #EBF0F5;
-  color: black;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid rgba(0,0,0,0.3);
-  -webkit-transition: 0.5s opacity;
-  -o-transition: 0.5s opacity;
-  transition: 0.5s opacity;
-}
-
+button,
 .button {
   border: none;
   display: inline-block;
   font-family: inherit;
-  background-color: #EBF0F5;
+  background-color: var(--grey-ish);
   color: black;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
-  border-bottom: 2px solid rgba(0,0,0,0.3);
+  border-bottom: 2px solid #000;
   -webkit-transition: 0.5s opacity;
   -o-transition: 0.5s opacity;
   transition: 0.5s opacity;
 }
 
-button:hover, button:focus, .button:hover, .button:focus {
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
   cursor: pointer;
   opacity: 0.6;
 }
 
 .button__secondary {
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: var(--black-ish);
+  color: var(--white-ish);
+  display: inline;
+  text-align: center;
 }
 
 .navigation-list__item--active {
   text-decoration: none;
 }
-
-
-div {
-  /* width: 400px; */
-  /* height: 400px; */
-  /* padding: 100px 100px; /* Adds a 10px inner spacing to all sides*/
-  /* margin: 0px 100px; /* Adds a 10px outer spacing to all sides*/
-  /* border: 2px solid black; /* Attributes describe: thickness, type, color*/
-  /* margin: 0 auto; */
-}
-
-/* .header__title {
-  margin: 0 auto;
-} */
-
-
 
 .profile__portrait {
   float: left;
@@ -128,20 +110,28 @@ div {
       -ms-flex: 0 1 100px;
           flex: 0 1 100px;
   width: 200px;
-  margin-left: 0px;
+  margin-left: 0;
 }
 
-.page-header, .page-header__item:last-child {
+.page-header__item:last-child {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   width: 30px;
   text-align: right;
-
 }
 
 .page-header {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: right;
   border-bottom: 1px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 20px;
 }
 
 .profile {
@@ -155,20 +145,7 @@ div {
           box-sizing: border-box;
 }
 
-.page-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  padding: 20px;
-}
-
 .button__main {
-  display: inline;
-  text-align: center;
-}
-
-.button__secondary {
   display: inline;
   text-align: center;
 }
@@ -186,7 +163,7 @@ div {
   margin-left: 15px;
 }
 
-.grid__item: {
+.grid__item {
   display: inline-block;
   width: 33%;
 }
@@ -201,22 +178,21 @@ div {
     margin: 0;
   }
 
+  .grid__item {
+    background-color: lightgray;
+    padding: 20px;
+    width: auto;
+    min-height: auto;
+    margin: 15px;
+  }
 
-.grid__item {
-  background-color: lightgray;
-  padding: 30px;
-  width: auto;
-  min-height: auto;
-  margin: 0;
-}
-
-.grid__item:last-child {
-  -ms-grid-column: 3;
-  grid-column: 3/3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1/3;
-}
+  .grid__item:last-child {
+    -ms-grid-column: 3;
+    grid-column: 3/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+  }
 }
 
 .title {
@@ -228,9 +204,7 @@ div {
   width: 400px;
   margin: 0 auto;
   text-align: left;
-
 }
-
 
 @media all and (max-width: 550px) {
   .grid {
@@ -238,20 +212,24 @@ div {
     grid-template-columns: 1fr;
   }
 }
+
 @media all and (min-width: 550px) and (max-width: 750px) {
   .grid {
     -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto/auto;
     grid-row: auto/auto;
   }
+
   h1 {
     font-size: 22px;
   }
@@ -259,27 +237,32 @@ div {
 
 @-webkit-keyframes color-change {
   0% {
-    fill: #edc655;
+    fill: var(--yellow-ish);
   }
+
   50% {
-    fill: #fcffad;
+    fill: var(--peach-ish);
   }
+
   100% {
-    fill: #f76414;
+    fill: var(--red-ish);
   }
 }
 
 @keyframes color-change {
   0% {
-    fill: #edc655;
+    fill: var(--yellow-ish);
   }
+
   50% {
-    fill: #fcffad;
+    fill: var(--peach-ish);
   }
+
   100% {
-    fill: #f76414;
+    fill: var(--red-ish);
   }
 }
+
 .sun {
   -webkit-animation: 4s color-change infinite alternate linear;
           animation: 4s color-change infinite alternate linear;
@@ -290,6 +273,7 @@ div {
     -webkit-transform: translate(0, 50px);
             transform: translate(0, 50px);
   }
+
   to {
     -webkit-transform: translate(200px, 50px);
             transform: translate(200px, 50px);
@@ -301,6 +285,7 @@ div {
     -webkit-transform: translate(0, 50px);
             transform: translate(0, 50px);
   }
+
   to {
     -webkit-transform: translate(200px, 50px);
             transform: translate(200px, 50px);
@@ -317,6 +302,7 @@ div {
     -webkit-transform: translate(446px, 48px);
             transform: translate(446px, 48px);
   }
+
   to {
     -webkit-transform: translate(100px, 48px);
             transform: translate(100px, 48px);
@@ -328,6 +314,7 @@ div {
     -webkit-transform: translate(446px, 48px);
             transform: translate(446px, 48px);
   }
+
   to {
     -webkit-transform: translate(100px, 48px);
             transform: translate(100px, 48px);
